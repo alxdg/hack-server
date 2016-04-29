@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myApp">
+    <head>
+        <title>Hackathon</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head> 
+    <body>
+        <div style="width:40%; float: left; margin-right: 40px">
+            <p class="message" id="message">
+                You are the winner                
+            </p>
+        </div>
+
+        <div style="width:40%; float: left"  ng-controller="queueCtrl">
+            <div class="container">
+                <h2>Queue</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Message</th>
+                            <th>Time Stamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="x in queue">
+                            <td>{{ x.User}}</td>
+                            <td>{{ x.Message}}</td>
+                            <td>{{ x.TimeStamp}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
